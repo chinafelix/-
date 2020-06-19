@@ -1,0 +1,67 @@
+<view class="book-detail-box">
+  <view class="book-detail-wrapper">
+  <view class="book-detail-top">
+    <image src="../../imgs/4.jpg" mode="aspectFit"></image>
+    <text class="weight">黑客与画家</text>
+    <text class="normal">[美]保罗。格雷厄姆</text>
+  </view>
+
+  <view class="book-detail-comment">
+    <text class="title">短评</text>
+    <view class="comment-list">
+      <view
+        wx:for="{{lists}}"
+        wx:key="id"
+        class="comment-list-item"
+      >
+        <text>{{item.name}}</text>
+        <text>+{{item.num}}</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class="book-detail-comment">
+    <text class="title">内容简介</text>
+    <view class="content">本书是有啊是放假哦我的感觉鞥了解我美国V.G大使馆门口给我木瓜粉但是你可是
+    本书是有啊是放假哦我的感觉鞥了解我美国V.G大使馆门口给我木瓜粉但是你可是</view>
+  </view>
+  
+  <view class="book-detail-comment no-margin">
+    <text class="title">书本信息</text>
+    <view class="book-detail-info">
+      <view>
+        <text>出版社</text>
+        <text>人民邮电出版社</text>
+      </view>
+      <view>
+        <text>出版年</text>
+        <text>2011-4</text>
+      </view>
+      <view>
+        <text>页数</text>
+        <text>220</text>
+      </view>
+      <view>
+        <text>定价</text>
+        <text>49.99</text>
+      </view>
+      <view>
+        <text>装帧</text>
+        <text>平装</text>
+      </view>
+    </view>
+  </view>
+  </view>
+  <view class="comment-input-box">
+    <input
+      class="comment-input"
+      placeholder="请输入短评"
+      placeholder-class="placeholder-class"
+    ></input>
+    <view>
+      <icon class="iconfont iconaixin"></icon>
+      <text>357</text>
+    </view>
+    <icon class="iconfont iconfenxiang_2"></icon>
+  </view>
+</view>

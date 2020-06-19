@@ -1,0 +1,109 @@
+.book-detail-box {
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+.book-detail-wrapper {
+  flex: 1;
+  overflow: scroll;
+}
+.book-detail-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30rpx 0;
+  background-color: #fff;
+  margin-bottom: 30rpx;
+}
+image {
+  height: 300rpx;
+}
+.weight {
+  font-weight: 700;
+  font-size: 36rpx;
+  padding: 30rpx 0 20rpx;
+}
+.normal {
+  font-size: 28rpx;
+  color: #999;
+}
+.book-detail-comment {
+  padding: 30rpx;
+  text-align: center;
+  background-color: #fff;
+  margin-bottom: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.book-detail-comment .title {
+  padding-bottom: 40rpx;
+}
+.comment-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.comment-list-item {
+  padding: 8rpx;
+  background-color: #f6f6f6;
+  margin-right: 16rpx;
+  margin-bottom: 16rpx;
+  color: #666;
+}
+.comment-list-item > text:last-child {
+  padding-left: 10rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+.content {
+  text-align: left;
+}
+.no-margin {
+  margin-bottom: 0;
+}
+.comment-input-box {
+  height: 100rpx;
+  background-color: #fff;
+  border-top: 2rpx solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  padding: 0 40rpx;
+  justify-content: space-between;
+}
+.comment-input {
+  border: 2rpx solid #e6e6e6;
+  border-radius: 1em;
+  width: 60vw;
+}
+.iconfont {
+  font-size: 40rpx;
+}
+.iconaixin {
+  font-size: 44rpx;
+  color: pink;
+}
+.comment-input-box > view {
+  display: flex;
+  align-items: center;
+}
+
+.comment-input-box > view> text {
+  align-self: flex-start;
+  font-size: 26rpx;
+  color: #999;
+}
+.book-detail-info > view {
+  line-height: 60rpx;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.book-detail-info > view >text:first-child {
+  color: #999;
+  width: 130rpx;
+}
+.book-detail-info > view >text:last-child {
+  color: #666;
+}

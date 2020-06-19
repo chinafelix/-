@@ -1,0 +1,27 @@
+  <view class="popular-top">
+    <view class="popular-top-left">
+      <view class="time-left time">
+        <text class="text">No.</text>
+        <text class="text">08</text>
+      </view>
+      <text class="line"></text>
+      <view class="time-right time">
+        <text class="text">六月</text>
+        <text class="text">2020</text>
+      </view>
+    </view>
+    <view class="popular-top-right">
+      <view class="heart">
+        <icon class="aixin-icon love"></icon>
+        <text class="text">888</text>
+      </view>
+      <icon class="fenxiang-icon share"></icon>
+    </view>
+  </view>
+  <view class="backgound">
+    <image src="../../../imgs/bg.jpg" mode="aspectFill" class="image"></image>
+    <text class="text">电影。</text>
+    <view class="title">人生不能像做菜，把所有材料准备好才下锅。</view>
+    
+  </view>
+

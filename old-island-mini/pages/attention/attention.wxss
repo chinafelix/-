@@ -1,0 +1,115 @@
+/* pages/attention/attention.wxss */
+.attention {
+  display: flex;
+  flex-direction: column;
+}
+.attention-wrapper {
+  width: 100vw;
+  height: 500rpx;
+  position: relative;
+}
+.top-bg {
+  height: 300rpx;
+}
+.attention-top-abs-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, .6);
+}
+.attention-top-abs {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 200rpx;
+  background-color: #fff;
+  clip-path: polygon(0 100rpx, 100% 0, 100% 300rpx, 0 300rpx);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 50rpx;
+}
+.attention-top-abs > view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.attention-top-abs > view .weight {
+  font-weight: 700;
+  font-size: 40rpx;
+}
+.attention-top-abs > view .normal {
+  color: #999;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+.attention-top-abs > view .iconfont {
+  font-size: 50rpx;
+}
+.login {
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #ccc;
+  border-radius: 50%;
+  left: 50%;
+  transform: translatex(-50%);
+  top: 200rpx;
+  z-index: 999;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 26rpx;
+  color: #fff;
+}
+.attention-list-wrapper {
+  flex: 1;
+  background-color: #f6f6f6;
+  padding: 30rpx 0;
+  text-align: center;
+}
+.attention-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.attention-list-item {
+  width: 44vw;
+  background-color: #fff;
+  margin-top: 4vw;
+  font-size: 26rpx;
+  padding-bottom: 40rpx;
+  display: flex;
+  flex-direction: column;
+  margin-left: 4vw;
+}
+.item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx;
+  color: #666;
+}
+.item-top .item-top-number {
+  font-size: 24rpx;
+  color: #ccc;
+  display: flex;
+}
+.item-top .item-top-number .iconfont {
+  color: pink;
+  font-size: 40rpx;
+}
+.title-style {
+  color: #666;
+  text-align: left;
+  line-height: 40rpx;
+  padding: 40rpx 20rpx;
+  font-size: 24rpx;
+}
+.item-top .item-top-number text {
+  align-self: flex-start;
+}
+.attention-list-item > image {
+  height: 28vw;
+}

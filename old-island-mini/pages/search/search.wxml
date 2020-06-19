@@ -1,0 +1,31 @@
+<view class="search-box">
+  <view class="search-wrapper">
+    <searchComponent 
+      search-class="iconfont iconsousuo iconshanchu" 
+      delete-class="iconfont iconshanchu"
+      class="flex-input"
+    />
+    <view class="cancel" bindtap="handleCancel">取消</view>
+  </view>
+
+  <view class="search-result">
+    <view class="search-result-title">
+      <text></text>
+      <text>历史搜索</text>
+    </view>
+    <view class="search-result-wrapper">
+      <text class="search-result-item" wx:for="{{history}}" wx:key="id"> {{item.name}} </text>
+    </view>
+  </view>
+
+  <view class="search-result">
+    <view class="search-result-title">
+      <text></text>
+      <text>热门搜索</text>
+    </view>
+    <view class="search-result-wrapper">
+      <text class="search-result-item" wx:for="{{hots}}" wx:key="id"> {{item.name}} </text>
+    </view>
+  </view>
+
+</view>

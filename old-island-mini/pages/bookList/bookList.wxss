@@ -1,0 +1,63 @@
+/* pages/bookList/bookList.wxss */
+.book-box {
+  border-top: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+}
+.book-search-wrapper {
+  width: 100vw;
+  background-color: #fff;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+}
+.book-search {
+  width: 80vw;
+  margin: 0 auto;
+  background-color: #efefef;
+  height: 60rpx;
+  border-radius: 30rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #ccc;
+  font-size: 30rpx;
+}
+.book-list-wrapper {
+  flex: 1;
+  background-color: #f6f6f6;
+  width: 100vw;
+  text-align: center;
+}
+.book-list-wrapper >text {
+  text-align: center;
+  line-height: 120rpx;
+  color: #666;
+}
+.book-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 11vw;
+}
+.book-list-item {
+  width: 34vw;
+  height: auto;
+  margin-bottom: 6vw;
+  box-shadow: 5rpx 5rpx 10rpx rgba(0, 0, 0, .3);
+  position: relative;
+}
+.book-list-item:nth-child(odd) {
+  margin-right: 10vw;
+}
+image {
+  height: 375rpx;
+}
+.book-list-item > text {
+  position: absolute;
+  right: 0rpx;
+  bottom: 20rpx;
+  color: #fff;
+  font-size: 26rpx;
+  padding: 6rpx 14rpx;
+  background-color: pink;
+  border-radius: 22rpx 0 0 22rpx;
+}

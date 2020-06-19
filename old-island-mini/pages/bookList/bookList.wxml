@@ -1,0 +1,21 @@
+<view class="book-box">
+  <view class="book-search-wrapper" bindtap="handleSearch">
+    <view class="book-search">
+      <icon class="iconfont iconsousuo"></icon>
+      <text>搜索书籍</text>
+    </view>
+  </view>
+  <view class="book-list-wrapper">
+    <text>精选</text>
+    <view class="book-list">
+      <view class="book-list-item"
+        wx:for="{{list}}"
+        wx:key="id"
+        bindtap="handleDetail"
+      >
+        <image src="{{item.url}}" mode="aspectFill"></image>
+        <text>{{item.id}}喜欢</text>
+      </view>
+    </view>
+  </view>
+</view>

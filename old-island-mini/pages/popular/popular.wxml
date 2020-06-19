@@ -1,0 +1,12 @@
+<!--popular/popular.wxml-->
+<view class="popular-box">
+  <detailComponent
+    aixin-icon="iconfont iconaixin"
+    fenxiang-icon="iconfont iconfenxiang_2"
+  />
+  <view class="boardcast">
+    <icon class="iconfont icontriangle-left"></icon>
+    <text>李安《饮食男女》</text>
+    <icon class="iconfont icontriangle-right"></icon>
+  </view>
+</view>

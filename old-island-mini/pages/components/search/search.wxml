@@ -1,0 +1,12 @@
+<view class="search-component-wrapper">
+  <view class="search-component-box">
+    <icon class="search-class icon"></icon>
+    <input
+      auto-focus
+      class="search-input"
+      placeholder="{{placeholder}}"
+      placeholder-class="placeholder"
+    ></input>
+    <icon class="delete-class icon big-icon"></icon>
+  </view>
+</view>

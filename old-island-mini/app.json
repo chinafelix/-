@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/popular/popular",
+    "pages/bookDetail/bookDetail",
+    "pages/attention/attention",
+    "pages/bookList/bookList",
+    "pages/search/search",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/attentionDetail/attentionDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "旧岛",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/popular/popular",
+        "text": "流行",
+        "iconPath": "./imgs/circle.png",
+        "selectedIconPath": "./imgs/circle_active.png"
+      },
+      {
+        "pagePath": "pages/bookList/bookList",
+        "text": "书单",
+        "iconPath": "./imgs/triangle.png",
+        "selectedIconPath": "./imgs/triangle_active.png"
+      },
+      {
+        "pagePath": "pages/attention/attention",
+        "text": "喜欢",
+        "iconPath": "./imgs/square.png",
+        "selectedIconPath": "./imgs/square_active.png"
+      }
+    ],
+    "color": "#e6e6e6",
+    "selectedColor": "#333"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

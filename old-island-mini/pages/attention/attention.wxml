@@ -1,0 +1,43 @@
+<view class="attention">
+  <view class="attention-wrapper">
+    <image 
+      src="../../imgs/top_bg.jpg" 
+      mode="aspectFill"
+      class="top-bg"
+    ></image>
+    <view class="attention-top-abs-wrapper">
+      <view class="attention-top-abs">
+        <view>
+          <icon class="iconfont iconxinxi"></icon>
+          <text class="normal">关于我们</text>
+        </view>
+        <view>
+          <text class="weight">296</text>
+          <text class="normal">喜欢的书</text>
+        </view>
+      </view>
+      <view class="login">登录</view>
+    </view>
+  </view>
+  <view class="attention-list-wrapper">
+    <text>喜欢</text>
+    <view class="attention-list">
+      <view 
+        class="attention-list-item"
+        wx:for="{{lists}}"
+        wx:key="id"
+        bindtap="handleTabItem"
+      >
+        <view class="item-top">
+          <text>{{item.type}}</text>
+          <view class="item-top-number">
+            <icon class="iconfont iconaixin"></icon>
+            <text>{{item.likeNum}}</text>
+          </view>
+        </view>
+        <image src="{{item.path}}" mode="aspectFill"></image>
+        <text class="title-style">{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+</view>
