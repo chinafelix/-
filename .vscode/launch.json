@@ -1,0 +1,26 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "当前文件",
+      "program": "${file}",
+      "request": "launch",
+      "type": "node"
+    },
+    {
+    "type": "node",
+    "request": "launch",
+    "name": "nodemon",
+    "program": "${file}",
+    "runtimeExecutable": "nodemon", // 或者 node-dev
+    "restart": true,
+    "console": "integratedTerminal",
+    "skipFiles": [
+      "${workspaceRoot}/node_modules/**/*.js",
+      "<node_internals>/**/*.js"
+    ]
+  }]
+}
