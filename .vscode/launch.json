@@ -5,6 +5,19 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "name": "nodemon",
+      "program": "${file}",
+      "request": "launch",
+      "restart": true,
+      "runtimeExecutable": "nodemon",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "pwa-node"
+    },
+    {
       "name": "当前文件",
       "program": "${file}",
       "request": "launch",
@@ -13,7 +26,7 @@
     {
     "type": "node",
     "request": "launch",
-    "name": "nodemon",
+    "name": "node",
     "program": "${file}",
     "runtimeExecutable": "nodemon", // 或者 node-dev
     "restart": true,

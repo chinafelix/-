@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/logs/logs",
     "pages/popular/popular",
     "pages/bookDetail/bookDetail",
     "pages/attention/attention",
     "pages/bookList/bookList",
     "pages/search/search",
     "pages/index/index",
-    "pages/logs/logs",
     "pages/attentionDetail/attentionDetail"
   ],
   "window": {

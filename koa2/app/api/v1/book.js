@@ -1,13 +1,14 @@
 const Router = require('koa-router')
 const { PositiveIntegerValidator } = require('../../validators/validator')
+const Auth = require('../../../middlewares/auth')
 
 const router = new Router({
   prefix: '/v1/book'
 })
 
-router.get('/latest', (ctx, next) => {
+router.get('/latest', new Auth().m, (ctx, next) => {
   ctx.body = {
-    content: 'book'
+    uid: ctx.auth.uid
   }
 })
 
