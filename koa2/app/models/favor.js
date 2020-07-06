@@ -6,7 +6,7 @@ const { Art } = require('./art')
 class Favor extends Model {
   static async like( art_id, type, uid ){
     // 向favor表插入数据，并且修改classic的一个模型的数据
-    const favor = Favor.findOne({
+    const favor = await Favor.findOne({
       where: {
         art_id, type, uid
       }
@@ -14,7 +14,7 @@ class Favor extends Model {
     if(favor) {
       throw new global.errs.LikeException()
     }
-    db.transaction(async t => {
+    return db.transaction(async t => {
       await Favor.create({
         art_id, type, uid
       }, { transaction: t })
@@ -24,8 +24,24 @@ class Favor extends Model {
     })
   }
 
-  static async dislike(art_id, type, uid){  
+  static async dislike(art_id, type, uid){
+    const favor = await Favor.findOne({
+      where: {
+        art_id, uid, type
+      }
+    })
+    if(!favor) {
+      throw new global.errs.DisLikeException()
+    }
+    return db.transaction(async t => {
+      await favor.destroy({
+        force: true,          // 是否是软删除， false： 是， true： 否
+        transaction: t
+      })
 
+      const art = await Art.getData(art_id, type)
+      await art.decrement('fav_nums', { by: 1, transaction: t })
+    })
   }
 }
 

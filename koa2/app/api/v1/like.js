@@ -6,11 +6,16 @@ const router = new Router({
   prefix: '/v1/like'
 })
 
-router.post('/', new Auth().m , async (ctx) => {
-  // 验证就跳过去了
+router.post('/:status', new Auth().m , async (ctx) => {
+  // 参数验证就跳过去了
   // ctx.body = ctx.auth
-  const r = await Favor.like(ctx.request.body.art_id, ctx.request.body.type, ctx.auth.uid)
-
+  const status = parseInt(ctx.params.status)
+  let r;
+  if(status) {
+    r = await Favor.like(ctx.request.body.art_id, ctx.request.body.type, ctx.auth.uid)
+  }else {
+    r = await Favor.dislike(ctx.request.body.art_id, ctx.request.body.type, ctx.auth.uid)
+  }
   throw new global.errs.Success()
 })
 

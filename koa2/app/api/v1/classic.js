@@ -18,4 +18,6 @@ router.get('/latest', async (ctx, next) => {
   ctx.body = art
 })
 
+// router.get('')
+
 module.exports = router

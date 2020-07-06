@@ -62,9 +62,9 @@ class Forbidden extends HttpException {
 class LikeException extends HttpException {
   constructor (message, code) {
     super()
-    this.message = message || '你已经点过赞了'
+    this.message = message || '你已经点过赞了,haha'
     this.code = code || '60001'
-    this.status = 400
+    this.status = 200
   }
 }
 
@@ -73,7 +73,7 @@ class DisLikeException extends HttpException {
     super()
     this.message = message || '你已经取消点赞了'
     this.code = code || '60002'
-    this.status = 400
+    this.status = 200
   }
 }
 
