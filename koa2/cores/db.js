@@ -20,7 +20,14 @@ const sequelize = new Sequelize(dbName, user, password, {
     updatedAt: 'updated_at',
     deletedAt: 'deleted_at',
     underscored: true,            // 多单词拼接的字段名，默认是驼峰式写法，换成下环线拼接
-    freezeTableName: true
+    freezeTableName: true,
+    scopes: {
+      del_time: {       // del_time 自定义的命名空间, 在 art.js里有调用示例
+        attributes: {
+          exclude: ['updated_at', 'created_at', 'deleted_at']     // 返回结果排除这三个字段
+        }
+      }
+    }
   }
 })
 

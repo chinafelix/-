@@ -63,6 +63,12 @@
   line-height: 100rpx;
   font-size: 26rpx;
   color: #fff;
+  padding: 0;
+  font-weight: normal;
+  overflow: hidden;
+}
+.userinfo-avatar {
+  width: 100%;
 }
 .attention-list-wrapper {
   flex: 1;

@@ -1,7 +1,7 @@
 {
   "name": "island",
   "version": "1.0.0",
-  "description": "7七月的微信公众号：林间有风",
+  "description": "旧岛小程序",
   "main": "app.js",
   "dependencies": {
     "axios": "^0.18.0",
@@ -34,7 +34,7 @@
   "keywords": [
     "island"
   ],
-  "author": "7yue",
+  "author": "fengxia",
   "license": "MIT",
   "devDependencies": {},
   "_moduleAliases": {

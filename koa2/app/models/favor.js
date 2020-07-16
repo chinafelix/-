@@ -1,6 +1,6 @@
-const {Sequelize, Model, INTEGER} = require('sequelize')
+const {Sequelize, Model, Op} = require('sequelize')
 const { db } = require('../../cores/db')
-const { sequelize } = require('./users')
+// const { sequelize } = require('./users')
 const { Art } = require('./art')
 
 class Favor extends Model {
@@ -19,7 +19,7 @@ class Favor extends Model {
         art_id, type, uid
       }, { transaction: t })
 
-      const art = await Art.getData(art_id, type)
+      const art = await Art.getData(art_id, type, false)
       await art.increment('fav_nums', { by: 1, transaction: t })
     })
   }
@@ -39,10 +39,53 @@ class Favor extends Model {
         transaction: t
       })
 
-      const art = await Art.getData(art_id, type)
+      const art = await Art.getData(art_id, type, false)
       await art.decrement('fav_nums', { by: 1, transaction: t })
     })
   }
+
+  static async userLikeIt (art_id,type, uid){
+    const favor = await Favor.findOne({
+      where: {
+        art_id,type, uid
+      }
+    })
+
+    return favor && true || false
+  }
+
+  static async getMyClassicFavors (uid){
+    const favors = await Favor.findAll({
+      where: {
+        uid,
+        type: {
+          [Op.not]: 400
+        }
+      }
+    })
+
+    return await Art.getList(favors)
+  }
+
+  static async getBookFavor(uid, book_id) {
+    const favor_num = await Favor.count({
+      where: {
+        art_id: book_id
+      }
+    })
+    const myFavor = await Favor.findOne({
+      where: {
+        art_id: book_id,
+        uid,
+        type: 400
+      }
+    })
+    return {
+      favor_num,
+      like_status: myFavor && 1 || 0
+    }
+  }
+
 }
 
 Favor.init({

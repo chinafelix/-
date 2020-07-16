@@ -5,33 +5,29 @@ const baseFields = {
   image: Sequelize.STRING,
   content: Sequelize.STRING,
   pubdate: Sequelize.DATEONLY,
-  fav_nums: Sequelize.INTEGER,
+  fav_nums: {
+    type: Sequelize.INTEGER,
+    defaultValue: 0
+  },
   title: Sequelize.STRING,
   type: Sequelize.TINYINT
 }
 
-class Movie extends Model {
-
-}
+class Movie extends Model {}
 
 Movie.init(baseFields, {
   sequelize: db,
   tableName: 'movie'
 })
 
-
-class Sentence extends Model {
-
-}
+class Sentence extends Model {}
 
 Sentence.init(baseFields, {
   sequelize: db,
   tableName: 'sentence'
 })
 
-class Music extends Model {
-
-}
+class Music extends Model {}
 
 Music.init({...baseFields, url: Sequelize.STRING}, {
   sequelize: db,

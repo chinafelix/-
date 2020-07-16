@@ -16,7 +16,16 @@
           <text class="normal">喜欢的书</text>
         </view>
       </view>
-      <view class="login">登录</view>
+      <button
+        class="login"
+        style="width: 100rpx;"
+        open-type="getUserInfo"
+        bindgetuserinfo="getUserInfo"
+         wx:if="{{!hasUserInfo && canIUse}}"
+      >登录</button>
+      <view wx:else class="login">
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+      </view>
     </view>
   </view>
   <view class="attention-list-wrapper">
