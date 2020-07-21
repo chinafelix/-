@@ -1,14 +1,17 @@
 {
-  "name": "book_city",
+  "name": "old-island-egg",
   "version": "1.0.0",
-  "description": "this is development by fengxia for the egg.js demo",
+  "description": "",
   "private": true,
   "egg": {
     "declarations": true
   },
   "dependencies": {
     "egg": "^2.15.1",
-    "egg-scripts": "^2.11.0"
+    "egg-scripts": "^2.11.0",
+    "egg-sequelize": "^5.2.2",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.3"
   },
   "devDependencies": {
     "autod": "^3.0.1",
@@ -23,8 +26,8 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-book_city",
-    "stop": "egg-scripts stop --title=egg-server-book_city",
+    "start": "egg-scripts start --daemon --title=egg-server-old-island-egg",
+    "stop": "egg-scripts stop --title=egg-server-old-island-egg",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
@@ -41,6 +44,6 @@
     "type": "git",
     "url": ""
   },
-  "author": "fengxia",
+  "author": "",
   "license": "MIT"
 }

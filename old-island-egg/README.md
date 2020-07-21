@@ -1,6 +1,6 @@
-# book_city
+# old-island-egg
 
-this is development by fengxia for the egg.js demo
+
 
 ## QuickStart
 
