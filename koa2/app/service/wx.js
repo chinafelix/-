@@ -26,7 +26,7 @@ class WXManager {
     // 拿到openid后，生成一份user数据， 包含 uid
     let user = await User.getUserByOpenId(result.data.openid)
     if(!user) {
-      user = User.registerUserByOpenId(result.data.openid)
+      user = await User.registerUserByOpenId(result.data.openid)
     }
     return generateToken(user.id, Auth.USER)
   }

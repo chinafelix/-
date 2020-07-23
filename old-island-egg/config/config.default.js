@@ -15,9 +15,6 @@ module.exports = appInfo => {
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1594867374424_9047';
 
-  // add your middleware config here
-  config.middleware = [];
-
   config.sequelize = {
     dialect: 'mysql',       // 哪种数据库
     host: 'localhost',
@@ -52,6 +49,24 @@ module.exports = appInfo => {
       }
     }
   }
+
+  config.security = {
+    csrf: {
+      enable: false
+    }
+  }
+
+  config.validate = {
+    // convert: false,
+    // validateRoot: false,
+  };
+
+  config.jwt = {  //jwt配置项
+    secret: "TenJueZhenWu",
+    expiresIn: 24 * 60 * 60
+  }
+
+  config.middleware = []
 
   // add your user config here
   const userConfig = {

@@ -11,18 +11,24 @@ module.exports = app => {
     },
     name: STRING(30),
     password: STRING(32),
-    email: STRING,
-    openid: STRING
+    openId: STRING
   })
 
 
-  User.addUser = async () => {
-    return await User.create({
-      name: '冯侠',
-      password: '123456',
-      email: '123456@qq.com',
-      openid: '14353defined53'
+  User.getUserById = async (openId) => {
+    const user = await User.findOne({
+      where: {
+        openId
+      }
     })
+    return user
+  }
+
+  User.createUserById = async (openId) => {
+    const user = await User.create({
+      openId
+    })
+    return user
   }
 
   return User
